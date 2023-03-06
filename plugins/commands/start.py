@@ -3,6 +3,6 @@ from pyrogram.types import Message
 
 from config import START_MESSAGE
 
-@Client.on_message(filters.command("start"))
-def start_message(client, message):
-    message.reply("Hello! I can help you to search torrent in telegram.\n\nyou van easily search torrent usingthis bot")
+@Client.on_message(pyrogram.Filters.command("start"))
+def start(client, message):
+    message.reply("Hi! I'm a Torrent Search Bot for search torrent.I can upload torrent to telegram")
