@@ -6,4 +6,4 @@ from config import START_MESSAGE
 
 @Client.on_message(filters.command("start"))
 async def start_message(c: Client, m: Message):
-    await m.reply_text(START_MESSAGE, reply_to_message_id=message.id)
+    await m.reply_text(START_MESSAGE, reply_to_message_id=m.id)
