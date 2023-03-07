@@ -4,6 +4,8 @@ from pyrogram.types import Message
 
 from config import START_MESSAGE
 
-@Client.on_message(pyrogram.filters.command("start"))
-def start(client, message):
-    message.reply("Hi! I'm a Torrent Search Bot for search torrent.I can upload torrent to telegram", reply_messages_id=message.id)
+@Client.on_message(filters.command('start') & Filters.private)
+async def start(bot, update):
+    await update.reply(
+        f"**Hi {update.chat.first_name}!**\n\n"
+        "I am a simple torrent searcher bot. You can search torrent easily by using this bot.For more help @DevsChats")
