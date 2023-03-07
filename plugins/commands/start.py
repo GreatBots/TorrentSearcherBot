@@ -6,4 +6,4 @@ from config import START_MESSAGE
 
 @Client.on_message(pyrogram.filters.command("start"))
 def start(client, message):
-    message.reply("Hi! I'm a Torrent Search Bot for search torrent.I can upload torrent to telegram" replay_messages_id=m.message.id)
+    message.reply("Hi! I'm a Torrent Search Bot for search torrent.I can upload torrent to telegram", replay_messages_id=m.message.id)
