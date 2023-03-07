@@ -4,7 +4,7 @@ from pyrogram.types import Message
 
 from config import START_MESSAGE
 
-@Client.on_message(filters.command('start') & Filters.private)
+@Client.on_message(filters.command('start') & filters.private)
 async def start(bot, update):
     await update.reply(
         f"**Hi {update.chat.first_name}!**\n\n"
